@@ -18,6 +18,12 @@ price_str = html.xpath('//tr/td[4]/text()')  # 演出的价格
 # 下面几行是按照价格最高和最低进行排序
 price_high = []
 price_low = []
+address_list=[]
+time_list=[]
+for i in address:
+    address_list.append(i)
+for i in time:
+    time_list.append(i)
 for i in price_str:
     prices = i.split("、")  # 一个演出通常会有多种票价，页面上用"、"分割，这里拆开
     prices = [int(i) for i in prices]
@@ -25,7 +31,7 @@ for i in price_str:
     price_high.append(max(prices))
     price_low.append(min(prices))
 # 把数据组合成元组的列表
-name_and_prices = zip(names, time, address, price_high, price_low)
+name_and_prices = zip(names, time_list, address_list, price_high, price_low)
 name_and_prices = [i for i in name_and_prices if i[2]
                 != '礼品卡' and i[1] != '全年' and i[1] != '常年']
 # 按每个演出最高价排序
@@ -35,7 +41,7 @@ low_price = sorted(name_and_prices, key=lambda x: x[4])
 # 打印结果
 print("中国演出票务网，在售最便宜前10：")
 for x in low_price[:10]:
-    print('价格:', x[4], '\t', x[2], '\t', x[0])
+    print('价格:', x[4], '\t',x[1],'\t', x[2], '\t', x[0])
 print("中国演出票务网，在售最贵前10：")
 for x in high_price[-10:]:
-    print('价格:', x[3], '\t', x[2], '\t', x[0])
+    print('价格:', x[3], '\t',x[1],'\t', x[2], '\t', x[0])
