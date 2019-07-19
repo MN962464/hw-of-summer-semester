@@ -5,9 +5,11 @@
 
 ### python作业
 
-**1、 China_piao.py ，这个是修改过后新加上地点输出的文件。**
++ **1、 China_piao.py ，这个是修改过后新加上地点输出的文件。**
 
-**2、piyao1.0 .py 抓取到的新闻不输出时间，采用position（）< 30 的语法；piyao2.0 .py 采用enumerate获取两个参数迭代的方法，可输出日期**
++ **2、piyao1.0 .py 抓取到的新闻不输出时间，采用position（）< 30 的语法；piyao2.0 .py 采用enumerate获取两个参数迭代的方法，可输出日期**
+
+----
 
 ### project工程里的c语言：推箱子小游戏
 
