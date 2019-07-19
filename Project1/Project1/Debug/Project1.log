@@ -1,0 +1,5 @@
+﻿  源.cpp
+c:\users\30426\source\repos\project1\project1\源.cpp(129): warning C4101: “hBrush”: 未引用的局部变量
+c:\users\30426\source\repos\project1\project1\源.cpp(130): warning C4101: “hPen”: 未引用的局部变量
+c:\users\30426\source\repos\project1\project1\源.cpp(128): warning C4101: “bgRgn”: 未引用的局部变量
+  Project1.vcxproj -> C:\Users\30426\source\repos\Project1\Debug\Project1.exe
